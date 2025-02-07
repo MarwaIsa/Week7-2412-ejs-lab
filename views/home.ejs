@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= RESTAURANTArray.name %></title>
+</head>
+<body>
+  <%- include('./partials/nav') %>
+
+    <h1>Home Page</h1>
+    <% if(RESTAURANTArray.isOpen === true ){ %>
+      <h3>Yes we are open!</h3>
+    <%} else {%>
+      <h3>Sorry, we are closed.</h3>
+    <% }%>
+
+
+    <% RESTAURANTArray.menu.forEach((eachMenu) => { %>
+      <h2><%= eachMenu.name %></h2>
+      <li>Address: <%= eachMenu.address %></li>
+      <li>Phone: <%= eachMenu.phone %></li>
+    <% }); %>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu</title>
+</head>
+<body>
+  <%- include('./partials/nav') %>
+  
+    <h1>Full Menu</h1>
+
+    <h2>Mains</h2>
+    <% RESTAURANTArray.menu.forEach((eachMenu) => { %>
+      <% if (eachMenu.category === 'mains') { %>
+        <h3><%= eachMenu.name %></h3>
+        <li>Price: <%= eachMenu.price %></li>
+        <li>Rating: <%= eachMenu.rating %></li>
+        <li>Details: <%= eachMenu.details %></li>
+      <% } %>
+    <% }); %>
+  
+    <h2>Desserts</h2>
+    <% RESTAURANTArray.menu.forEach((eachMenu) => { %>
+      <% if (eachMenu.category === 'desserts') { %>
+        <h3><%= eachMenu.name %></h3>
+        <li>Price: <%= eachMenu.price %></li>
+        <li>Rating: <%= eachMenu.rating %></li>
+        <li>Details: <%= eachMenu.details %></li>
+      <% } %>
+    <% }); %>
+  
+    <h2>Sides</h2>
+    <% RESTAURANTArray.menu.forEach((eachMenu) => { %>
+      <% if (eachMenu.category === 'sides') { %>
+        <h3><%= eachMenu.name %></h3>
+        <li>Price: <%= eachMenu.price %></li>
+        <li>Rating: <%= eachMenu.rating %></li>
+        <li>Details: <%= eachMenu.details %></li>
+      <% } %>
+    <% }); %>
+
+
+</body>
+</html>
